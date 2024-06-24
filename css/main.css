@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Cartoon";
+  src: url("../assets/Cartoons-123.ttf");
+}
+
+body {
+  font-family: "Cartoon";
+  background-image: url("../assets/bg.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+.tokenomics {
+  background-image: url("../assets/circle-crayon-brush-background-free-png.png");
+  background-size: cover;
+  background-position: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-stroke {
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0, 0, 0) -2px -2px 0px, rgb(0, 0, 0) 1px -2px 0px,
+    rgb(0, 0, 0) -2px 2px 0px, rgb(0, 0, 0) 1px 2px 0px;
+}
+
+.box-1 {
+  --mask: radial-gradient(30px at 75% 100%, #0000 98%, #000) 50%
+      calc(100% - 30px) / 120px 100% repeat-x,
+    radial-gradient(30px at 25% 50%, #000 99%, #0000 101%) bottom/120px 60px
+      repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.box-2 {
+  --mask: radial-gradient(30px at bottom, #0000 97%, #000) 50% / 55.5px 100%;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.box-3 {
+  --mask: conic-gradient(
+        from 135deg at top,
+        #0000,
+        #000 1deg 89deg,
+        #0000 90deg
+      )
+      top/60px 51% repeat-x,
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg)
+      bottom/60px 51% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.box-4 {
+  --mask: conic-gradient(
+      from 135deg at top,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg
+    )
+    50%/60px 100%;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.box-5 {
+  aspect-ratio: 1;
+  --g: /9.464% 9.464% radial-gradient(#000 calc(71% - 1px), #0000 71%) no-repeat;
+  mask: 100% 50% var(--g), 98.907% 60.396% var(--g), 95.677% 70.337% var(--g),
+    90.451% 79.389% var(--g), 83.457% 87.157% var(--g), 75% 93.301% var(--g),
+    65.451% 97.553% var(--g), 55.226% 99.726% var(--g), 44.774% 99.726% var(--g),
+    34.549% 97.553% var(--g), 25% 93.301% var(--g), 16.543% 87.157% var(--g),
+    9.549% 79.389% var(--g), 4.323% 70.337% var(--g), 1.093% 60.396% var(--g),
+    0% 50% var(--g), 1.093% 39.604% var(--g), 4.323% 29.663% var(--g),
+    9.549% 20.611% var(--g), 16.543% 12.843% var(--g), 25% 6.699% var(--g),
+    34.549% 2.447% var(--g), 44.774% 0.274% var(--g), 55.226% 0.274% var(--g),
+    65.451% 2.447% var(--g), 75% 6.699% var(--g), 83.457% 12.843% var(--g),
+    90.451% 20.611% var(--g), 95.677% 29.663% var(--g), 98.907% 39.604% var(--g),
+    radial-gradient(100% 100%, #000 45.02%, #0000 calc(45.02% + 1px));
+}
+
+.box-6 {
+  --mask: conic-gradient(
+      from 135deg at top,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg
+    )
+    50%/60px 100%;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.bounce {
+  position: relative;
+  animation: moveUpDown 2s infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: "Londrina Solid";
+  font-size: 30px;
+  padding: 0 5px 8px 0;
+  background: repeating-linear-gradient(90deg, currentColor 0 8%, #0000 0 10%)
+    200% 100%/200% 3px no-repeat;
+  animation: l3 2s steps(6) infinite;
+}
+.loader:before {
+  content: "Loading...";
+}
+@keyframes l3 {
+  to {
+    background-position: 80% 100%;
+  }
+}
+
+/* Rocket moving from left to right and back infinitely animation */
+.rocket {
+  position: absolute;
+  top: 22%;
+  animation: herofly 20s linear infinite;
+}
+
+@keyframes herofly {
+  0% {
+    transform: translateX(-10vw) scaleX(1);
+  }
+
+  50% {
+    transform: translateX(100vw) scaleX(1);
+  }
+
+  51% {
+    transform: translateX(100vw) scaleX(-1);
+  }
+
+  100% {
+    transform: translateX(-110vw) scaleX(-1);
+  }
+}
+
+.rocket-2 {
+  position: absolute;
+  top: 22%;
+  animation: herofly-2 20s linear infinite;
+}
+
+@keyframes herofly-2 {
+  0% {
+    transform: translateX(10vw) scaleX(-1);
+  }
+
+  50% {
+    transform: translateX(-100vw) scaleX(-1);
+  }
+
+  51% {
+    transform: translateX(-100vw) scaleX(1);
+  }
+
+  100% {
+    transform: translateX(110vw) scaleX(1);
+  }
+}
+
+/* @keyframes heroflyMobile {
+  0% {
+    transform: translateX(-60vw) scaleX(1);
+  }
+
+  50% {
+    transform: translateX(100vw) scaleX(1);
+  }
+
+  51% {
+    transform: translateX(100vw) scaleX(-1);
+  }
+
+  100% {
+    transform: translateX(-60vw) scaleX(-1);
+  }
+} */
+
+/* write the css to make the title shake on hover */
+
+.shake:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+  50% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+.rand-bg {
+  background-image: url("../assets/meme2.JPG");
+  background-size: cover;
+  background-position: center;
+}
